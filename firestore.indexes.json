@@ -1,0 +1,22 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "live_players",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "matchId", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "runs", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "match_history",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "matchId", "order": "ASCENDING" },
+        { "fieldPath": "innings", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

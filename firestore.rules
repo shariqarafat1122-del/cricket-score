@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // live_players collection
+    match /live_players/{docId} {
+      allow read: if true;
+      allow write: if true; // Tighten in production with auth
+    }
+    
+    // match_history collection
+    match /match_history/{docId} {
+      allow read: if true;
+      allow write: if true; // Tighten in production with auth
+    }
+  }
+}
